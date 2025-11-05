@@ -1,0 +1,92 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Deep violet blend */
+  min-height: 100vh;
+  padding-bottom: 100px;
+  color: #e0e0e0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+}
+
+.glass-card:hover {
+  box-shadow: 0 15px 45px rgba(98, 0, 238, 0.4);
+}
+
+.card-header {
+  background: linear-gradient(90deg, rgba(98, 0, 238, 0.2), rgba(33, 150, 243, 0.2));
+  font-weight: 600;
+  color: #b388ff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #7b1fa2, #3949ab, #1e88e5);
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(63, 81, 181, 0.5);
+}
+
+.btn-outline-danger {
+  border: 1px solid #ef5350;
+  color: #ef5350;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.btn-outline-danger:hover {
+  background: linear-gradient(90deg, #ef5350, #f06292);
+  color: white;
+  box-shadow: 0 5px 15px rgba(239, 83, 80, 0.4);
+}
+
+.list-group-item {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-text {
+  color: #b39ddb;
+  font-weight: 600;
+}
+
+.list-text.line-throught {
+  text-decoration: line-through;
+  color: #757575;
+}
+
+.under-list-item {
+  font-size: 0.9rem;
+  padding-left: 30px;
+  color: #b0bec5;
+}
+
+.footer {
+  background: linear-gradient(90deg, #1a237e, #512da8, #0d47a1);
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+}

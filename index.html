@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kanika Garg" />
+    <title>Kanika's To Do List</title>
+
+    <!-- Font & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9c206210e0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- SweetAlert2 + Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="container app-wrap mt-5 row">
+      <div class="task-add-box my-3 col-12 col-lg-4 order-lg-3">
+        <div class="card glass-card">
+          <div class="card-header"><h5>Add New Task</h5></div>
+          <div class="card-body px-4">
+            <form id="addingForm" class="form-group row">
+              <input
+                class="form-control col-10 col-md-11 col-lg-10"
+                type="text"
+                placeholder="Enter a task"
+              />
+              <button
+                type="submit"
+                class="btn btn-primary col-2 col-md-1 col-lg-2"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="space col-0 col-lg-1 order-lg-2"></div>
+
+      <div class="list-box my-3 col-12 col-lg-7 order-lg-1">
+        <div class="card glass-card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h5>To Do List</h5>
+            <a href="#" class="btn btn-outline-danger" id="delAll">
+              Delete All
+            </a>
+          </div>
+          <div class="card-body p-0">
+            <ul id="mainList" class="list-group">
+              <div id="accordion">
+                <li id="upperLi" class="list-group-item d-none">
+                  <a
+                    href="#collapse0"
+                    class="card-link list-item list-text"
+                    data-toggle="collapse"
+                  >
+                    <!--Text Here-->
+                  </a>
+                  <div class="actions">
+                    <a href="#" class="check text-success fas fa-check"></a>
+                    <a href="#" class="delete-item text-danger fas fa-times"></a>
+                  </div>
+                  <div id="collapse0" class="collapse" data-parent="#accordion">
+                    <div class="under-list-item">
+                      <ul class="list-group">
+                        <li id="innerLi" class="list-group-item">
+                          <span><!--Text Here--></span>
+                          <a
+                            href="#"
+                            class="d-none inner-check text-success fas fa-check"
+                          ></a>
+                          <a
+                            href="#"
+                            class="d-none delete-inner-item text-danger fas fa-times"
+                          ></a>
+                        </li>
+                        <div class="mt-2 under-list-input px-4">
+                          <form action="" class="form-group row">
+                            <input
+                              class="form-control col-10 col-md-11"
+                              type="text"
+                              placeholder="Enter Subtask"
+                            />
+                            <button
+                              type="submit"
+                              class="btn btn-primary col-2 col-md-1 p-0 btn-add-inner-task"
+                            >
+                              <i class="fas fa-plus i-add-inner-task"></i>
+                            </button>
+                          </form>
+                        </div>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer text-center">
+      <p>Made with ❤️ by <strong>Kanika Garg</strong></p>
+    </footer>
+
+    <script src="script2.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
